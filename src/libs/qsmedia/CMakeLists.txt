@@ -12,6 +12,11 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC QSMEDIA_STATIC)
 
 target_include_directories(${PROJECT_NAME} PUBLIC .)
 
+find_package(Qt6 REQUIRED COMPONENTS Core CorePrivate)
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Core)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::CorePrivate)
+
 target_include_directories(${PROJECT_NAME} PRIVATE Api NAudio
     ${Qt${QT_VERSION_MAJOR}Core_PRIVATE_INCLUDE_DIRS}
 )

@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "gui/MainWindow.h"
 
 #include <QApplication>
@@ -5,6 +6,8 @@
 
 #include <QBreakpadHandler.h>
 #include <cpp-pinyin/G2pglobal.h>
+
+#include <QMessageBox>
 
 #ifdef Q_OS_WINDOWS
 #    include <ShlObj.h>
@@ -27,7 +30,7 @@ int main(int argc, char *argv[]) {
 
     QBreakpadHandler::UniqueExtraHandler = []() {
         // Do something when crash occurs.
-        MessageBoxW(nullptr, L"Crash!!!", L"QBreakpad Demo", MB_OK | MB_ICONERROR);
+        QMessageBox::critical(nullptr, "QBreakpad Demo", "Crash!!!");
     };
 
     if (isUserRoot() && !QApplication::arguments().contains("--allow-root")) {

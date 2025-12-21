@@ -1,7 +1,10 @@
 file(GLOB_RECURSE _src *.h *.cpp)
 
 add_library(${PROJECT_NAME} ${_src})
-target_include_directories(${PROJECT_NAME} PUBLIC *.h)
+target_compile_options(${PROJECT_NAME} PRIVATE "-include" "cstring")
+target_compile_options(${PROJECT_NAME} PRIVATE "-include" "cstdint")
+
+target_include_directories(${PROJECT_NAME} PUBLIC .)
 
 find_package(fftw3 CONFIG REQUIRED)
 target_include_directories(${PROJECT_NAME} PUBLIC ${FFTW3_INCLUDE_DIRS})

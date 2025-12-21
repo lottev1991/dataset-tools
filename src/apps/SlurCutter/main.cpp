@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "gui/MainWindow.h"
 
 #include <QApplication>

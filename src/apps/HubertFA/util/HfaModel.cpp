@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "HfaModel.h"
 
 #include <iostream>
@@ -72,7 +73,7 @@ namespace HFA {
         const size_t batch_size = input_data.size();
         size_t max_len = 0;
         for (const auto &vec : input_data) {
-            max_len = max(max_len, vec.size());
+            max_len = std::max(max_len, vec.size());
         }
 
         std::vector<float> flattened_input;

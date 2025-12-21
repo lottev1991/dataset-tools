@@ -1,6 +1,7 @@
 #include "LyricAligner.h"
 #include <algorithm>
 #include <sstream>
+#include <iterator>
 #include <stdexcept>
 #include <string>
 #include <tuple>
