@@ -99,3 +99,14 @@ setup-vcpkg.json
 setup-vcpkg-temp*
 /src/libs/onnxruntime/
 /installed
+/scripts/azure-pipelines
+/scripts/angle
+/scripts/boost
+/scripts/buildsystems
+/scripts/detect_compiler
+/scripts/get_cmake_vars
+/scripts/ifw
+/scripts/posh-vcpkg
+/scripts/templates
+/scripts/test_ports
+/scripts/toolchains
