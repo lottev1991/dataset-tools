@@ -2,7 +2,7 @@ if (NOT DEFINED BUILD_TESTS)
     set(BUILD_TESTS on)
 endif ()
 
-find_package(QT NAMES Qt6 COMPONENTS Core Widgets Svg REQUIRED)
+find_package(QT NAMES Qt5 COMPONENTS Core Widgets Svg REQUIRED)
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Widgets Svg REQUIRED)
 
