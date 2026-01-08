@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
     //QBreakpadHandler handler;
-    handler.setDumpPath(a.applicationDirPath() + "/dumps");
+    //handler.setDumpPath(a.applicationDirPath() + "/dumps");
 
     //QBreakpadHandler::UniqueExtraHandler = []() {
         // Do something when crash occurs.
