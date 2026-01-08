@@ -53,9 +53,9 @@ cd /D src/libs
 cmake -Dep=dml -P ../../scripts/setup-onnxruntime.cmake
 
 cd ../../
-set QT_DIR=<dir> # directory `Qt5Config.cmake` locates
-set Qt5_DIR=%QT_DIR%
-set VCPKG_KEEP_ENV_VARS=QT_DIR;Qt5_DIR
+set QT_DIR=<dir> # directory `Qt6Config.cmake` locates
+set Qt6_DIR=%QT_DIR%
+set VCPKG_KEEP_ENV_VARS=QT_DIR;Qt6_DIR
 
 git clone https://github.com/microsoft/vcpkg.git
 cd /D vcpkg
@@ -74,9 +74,9 @@ cd src/libs
 cmake -Dep=cpu -P ../../scripts/setup-onnxruntime.cmake
 
 cd ../../
-export QT_DIR=<dir> # directory `Qt5Config.cmake` locates
-export Qt5_DIR=$QT_DIR
-export VCPKG_KEEP_ENV_VARS="QT_DIR;Qt5_DIR"
+export QT_DIR=<dir> # directory `Qt6Config.cmake` locates
+export Qt6_DIR=$QT_DIR
+export VCPKG_KEEP_ENV_VARS="QT_DIR;Qt6_DIR"
 
 git clone https://github.com/microsoft/vcpkg.git
 cd vcpkg
