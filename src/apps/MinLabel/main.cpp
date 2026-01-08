@@ -4,7 +4,7 @@
 #include <QApplication>
 #include <QMessageBox>
 
-#include <QBreakpadHandler.h>
+//#include <QBreakpadHandler.h>
 #include <cpp-pinyin/G2pglobal.h>
 
 #include <QMessageBox>
@@ -25,13 +25,13 @@ bool isUserRoot() {
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
-    QBreakpadHandler handler;
+    //QBreakpadHandler handler;
     handler.setDumpPath(a.applicationDirPath() + "/dumps");
 
-    QBreakpadHandler::UniqueExtraHandler = []() {
+    //QBreakpadHandler::UniqueExtraHandler = []() {
         // Do something when crash occurs.
-        QMessageBox::critical(nullptr, "QBreakpad Demo", "Crash!!!");
-    };
+        //QMessageBox::critical(nullptr, "QBreakpad Demo", "Crash!!!");
+    //};
 
     if (isUserRoot() && !QApplication::arguments().contains("--allow-root")) {
         QString title = QApplication::applicationName();
