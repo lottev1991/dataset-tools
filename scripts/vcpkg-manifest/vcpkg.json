@@ -9,7 +9,10 @@
     "soxr",
     "wolf-midi",
     "libsndfile",
-    "qbreakpad",
+    {
+      "name": "qbreakpad",
+      "features": [ "qt6" ]
+    },
     "nlohmann-json"
   ],
   "vcpkg-configuration": {
