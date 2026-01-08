@@ -110,4 +110,3 @@ setup-vcpkg-temp*
 /scripts/templates
 /scripts/test_ports
 /scripts/toolchains
-/scripts

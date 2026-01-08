@@ -17,7 +17,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
         cpp-pinyin::cpp-pinyin
         cpp-kana::cpp-kana
         SDLPlayback FFmpegDecoder
-        #qBreakpad::qBreakpad
+        qBreakpad::qBreakpad
 )
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE
