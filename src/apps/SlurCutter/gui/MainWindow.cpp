@@ -187,8 +187,6 @@ namespace SlurCutter {
         nextAction->setShortcut(QKeySequence(cfg->value("Navigation/Next", "PgDown").toString()));
         playAction->setShortcut(QKeySequence(cfg->value("Playback/Play", "F5").toString()));
 
-        f0Widget->loadConfig(cfg);
-
         if (const QString savedDir = cfg->value("General/LastDir").toString();
             !savedDir.isEmpty() && QDir(savedDir).exists()) {
             dirname = savedDir;
